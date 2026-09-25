@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog — Özden</title>
+<meta name="description" content="Özden'in blog yazıları. Okudukça fincan dolar.">
+<meta name="theme-color" content="#F6EFE0">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function(){try{var t=localStorage.getItem('theme');if(!t){var h=new Date().getHours();t=(h>=19||h<7)?'night':'day'}document.documentElement.dataset.theme=t}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+<header class="top">
+  <a class="brand" href="./">Özden<span>.</span></a>
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Dil" data-langs style="display:flex"></div>
+    <a class="btn small ghost press" href="./#blog" data-i18n="back">Ana sayfa</a>
+  </div>
+  <div class="lamp">
+    <div class="cable"></div>
+    <svg width="48" height="52" viewBox="0 0 48 52" aria-hidden="true">
+      <circle class="glow" cx="24" cy="38" r="22" fill="#E0A23B"/>
+      <path d="M10 26 L38 26 L46 10 L2 10 Z" style="fill:var(--ink)"/>
+      <circle cx="24" cy="32" r="8" style="fill:var(--bulb);stroke:var(--ink)" stroke-width="2"/>
+    </svg>
+    <button class="cord" data-theme-toggle aria-pressed="false"><i></i><b></b></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="article">
+    <article data-article></article>
+    <aside class="cupbox" aria-live="polite">
+      <h2 data-cup-title>Bir kahve içelim mi?</h2>
+      <svg class="cup" viewBox="0 -30 240 270" aria-hidden="true">
+        <defs><clipPath id="blogCup"><path d="M40 70 L200 70 L186 190 Q184 206 168 206 L72 206 Q56 206 54 190 Z"/></clipPath></defs>
+        <g class="steam" fill="none" stroke="#9A5320" stroke-width="4" stroke-linecap="round">
+          <path d="M90 56 q-10 -14 0 -26 q10 -12 0 -24"/>
+          <path d="M120 56 q-10 -14 0 -26 q10 -12 0 -24"/>
+          <path d="M150 56 q-10 -14 0 -26 q10 -12 0 -24"/>
+        </g>
+        <ellipse cx="120" cy="214" rx="104" ry="12" style="fill:var(--shadow)"/>
+        <path d="M198 96 Q236 96 232 130 Q228 162 190 160" fill="none" style="stroke:var(--ink)" stroke-width="7"/>
+        <path d="M40 70 L200 70 L186 190 Q184 206 168 206 L72 206 Q56 206 54 190 Z" fill="#FBF6EA"/>
+        <rect data-liquid x="30" y="206" width="180" height="160" fill="#6B4226" clip-path="url(#blogCup)" style="transition:y .15s linear"/>
+        <path d="M40 70 L200 70 L186 190 Q184 206 168 206 L72 206 Q56 206 54 190 Z" fill="none" style="stroke:var(--ink)" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <p class="pct muted" data-cup-pct>%0</p>
+    </aside>
+  </section>
+</main>
+
+<script src="i18n.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
